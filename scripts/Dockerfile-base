@@ -1,0 +1,18 @@
+# Ubuntu 18.04를 상속
+FROM nvidia/opengl:1.0-glvnd-devel-ubuntu18.04
+
+# 이미지 빌드 중엔 CLI 환경이 사용자 입력을 받을 수 없는 환경임을 알려줌
+ENV DEBIAN_FRONTEND=noninteractive
+# 기본 패키지 설치
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && echo "===== Install basic utils =====" \
+    && apt-get install -y \
+        build-essential gedit nano wget curl unzip cmake git mesa-utils nautilus \
+    && echo "===== Install dev libs =====" \
+    && apt-get install -y \
+        libpython2.7-dev libpython3-dev libopencv-dev libeigen3-dev libboost-all-dev \
+    && echo "===== Install auxiliary apps =====" \
+    && apt-get install -y \
+        rpl silversearcher-ag cmake-gui
+

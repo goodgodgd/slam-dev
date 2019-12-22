@@ -1,0 +1,33 @@
+Ubuntu 18.04
+
+Common
+    build-essential gedit nano wget curl unzip cmake git mesa-utils
+    libpython2.7-dev libpython3-dev libopencv-dev libeigen3-dev
+
+ORB-SLAM2
+    pangolin
+        Download: https://github.com/stevenlovegrove/Pangolin
+        libgl1-mesa-dev libglew-dev
+        pkg-config libegl1-mesa-dev libwayland-dev libxkbcommon-dev wayland-protocols
+        libdc1394-22-dev libraw1394-dev libuvc-dev
+        ffmpeg libavcodec-dev libavutil-dev libavformat-dev libswscale-dev libavdevice-dev
+        libjpeg-dev libpng-dev libtiff5-dev libopenexr-dev
+        libopencv-dev libeigen3-dev
+        libsuitesparse-dev qtdeclarative5-dev qt5-qmake libqglviewer-dev
+
+    ORB-SLAM2
+        libopencv-dev libeigen3-dev
+
+VINS-Fusion
+    Ceres
+        Download: https://ceres-solver.googlesource.com/ceres-solver
+        Docs: http://ceres-solver.org/installation.html#linux
+        libeigen3-dev libgoogle-glog-dev libgflags-dev libsuitesparse-dev libatlas-base-dev
+        
+    VINS-Fusion
+        ros
+        ros-${ROS_DISTRO}-cv-bridge
+        ros-${ROS_DISTRO}-image-transport
+        ros-${ROS_DISTRO}-message-filters
+        ros-${ROS_DISTRO}-tf
+

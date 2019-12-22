@@ -1,0 +1,19 @@
+# nvidia/opengl:1.0-glvnd-devel-ubuntu18.04 기반으로 기본 툴들 설치해놓은 nvgl-dev-bionic:base 상속
+FROM nvgl-dev-bionic:base
+
+# 이미지 빌드 중엔 CLI 환경이 사용자 입력을 받을 수 없는 환경임을 알려줌
+ENV DEBIAN_FRONTEND=noninteractive
+COPY ros_setup.sh /root
+
+# ROS 설치
+RUN echo "===== Install ROS dependencies =====" \
+    && apt-get install -y \
+        build-essential chrony ntpdate gnupg2 \
+    && echo "===== Install ROS =====" \
+    && chmod a+x /root/ros_setup.sh \
+    && /root/ros_setup.sh \
+    && echo "===== Install ROS packages =====" \
+    && apt-get install -y \
+        ros-melodic-cv-bridge ros-melodic-image-transport ros-melodic-message-filters ros-melodic-tf \
+        python-rosinstall python-rosinstall-generator python-wstool python-catkin-tools
+
