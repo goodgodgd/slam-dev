@@ -60,5 +60,5 @@ fi
 cd /work
 chmod -R a+rw ./
 
-echo "[Complete!!!]"
+echo "[ORB_SLAM2 Complete!!!]"
 

@@ -17,12 +17,12 @@ cd /work/Pangolin
 rm -rf build || true
 mkdir build
 cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/bin
+cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr
 make -j4
 make install
 
 cd /work
 chmod -R a+rw ./
 
-echo "[Complete!!!]"
+echo "[Pangolin Complete!!!]"
 
