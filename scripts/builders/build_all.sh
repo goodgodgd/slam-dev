@@ -1,7 +1,7 @@
 #!/bin/bash
 
 WORK_ROOT=/work
-SCRIPT_PATH=$WORK_ROOT/scripts
+SCRIPT_PATH=$WORK_ROOT/scripts/builders
 ROS_VERSION="melodic"
 CATKIN_WS=$WORK_ROOT/catkin_ws
 
