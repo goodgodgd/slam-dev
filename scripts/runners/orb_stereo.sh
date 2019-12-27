@@ -5,5 +5,5 @@ ORB_ROOT=/work/ORB_SLAM2
 $ORB_ROOT/Examples/Stereo/stereo_kitti \
     $ORB_ROOT/Vocabulary/ORBvoc.txt \
     $ORB_ROOT/Examples/Stereo/$KITTI_CONFIG \
-    /work/dataset/kitti_odometry/sequences/$SEQUENCE_NUMBER
+    /work/dataset1/kitti_odometry/sequences/$SEQUENCE_NUMBER
 
